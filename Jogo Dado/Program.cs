@@ -12,10 +12,11 @@
                 Console.WriteLine("Pressione qualquer tecla para rodar o dado.");
                 Console.ReadKey();
                 Random nAleatorio = new Random();
-                seuNumero = nAleatorio.Next(11);
+                seuNumero = nAleatorio.Next(1, 11);
                 Console.WriteLine($"voce tirou o numero: {seuNumero}");
                 Console.WriteLine("...");
-                numeroAdversario = nAleatorio.Next(11);
+                System.Threading.Thread.Sleep(1000);
+                numeroAdversario = nAleatorio.Next(1, 11);
                 Console.WriteLine($"O adversário tirou o numero: {numeroAdversario}");
                 if (seuNumero > numeroAdversario)
                 {
@@ -48,7 +49,8 @@
                         Console.WriteLine("Voce perdeu!");
                     }
                 }
-                Console.WriteLine();
+                Console.ReadLine();
+                Console.Clear();
 
             }
         }
